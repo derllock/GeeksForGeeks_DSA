@@ -29,7 +29,7 @@ class Solution {
     // function to return sum of  1, 2, ... n
     long seriesSum(int n) {
         // code here
-        long k=n;
+        long k=n;//// yo whazzzuppp
         return k*(k+1)/2;
     }
 }
