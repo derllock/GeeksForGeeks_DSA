@@ -28,9 +28,9 @@ class GFG {
 class Solution {
     static int closestNumber(int N , int M) {
         // code here
-        double remainder=Math.abs(N%M);
-        double res=0;
-        double k=Math.abs(M);
+        double remainder=Math.abs(N%M); //double cause k is in fraction, causes error 
+        double res=0;                   // 4234/2823,k=1411.5 && remainder=1411..... last case will be wrongly implemented if int used
+        double k=Math.abs(M);      //sign of divisor does not effect answer but wronly changes if cases
         if(remainder<(k/2)){
             if(N>0 || N==0) res=N-remainder;
             else res= N+remainder;
@@ -43,6 +43,6 @@ class Solution {
             if(N>0 || N==0) res=N+remainder;
             else res= N-remainder;
         }
-        return (int)res;
+        return (int)res;     //double to int
     }
 }
